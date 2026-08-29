@@ -4,7 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
-import "./login.css";
+import "../auth.css";
 
 const loginSchema = z.object({
     email: z.string().email(),
@@ -27,53 +27,48 @@ export default function AuthLogin() {
     };
 
     return (
-        <div className="login-container">
-            <div className="login-header">
-                <h1 className="login-title">Welcome back</h1>
+        <div className="auth-container">
+            <div className="auth-header">
+                <h1 className="auth-title">Welcome back</h1>
 
-                <p className="login-subtitle">Login to your account</p>
+                <p className="auth-subtitle">Login to your account</p>
             </div>
 
-            <div className="login-card">
+            <div className="auth-card">
                 <form
-                    className="login-form"
+                    className="auth-form"
                     onSubmit={handleSubmit(submitFunction)}
                     autoComplete="off"
                 >
-                    <div className="login-field">
-                        <label className="login-label">Email</label>
+                    <div className="auth-field">
+                        <label className="auth-label">Email</label>
 
                         <input
                             {...register("email")}
                             type="text"
                             placeholder="you@example.com"
                             autoComplete="username"
-                            className="login-input"
+                            className="auth-input"
                         />
 
-                        <p className="login-error">{errors.email?.message}</p>
+                        <p className="auth-error">{errors.email?.message}</p>
                     </div>
 
-                    <div className="login-field">
-                        <label className="login-label">Password</label>
+                    <div className="auth-field">
+                        <label className="auth-label">Password</label>
 
                         <input
                             {...register("password")}
                             type="password"
                             placeholder="••••••••"
                             autoComplete="current-password"
-                            className="login-input"
+                            className="auth-input"
                         />
 
-                        <p className="login-error">
-                            {errors.password?.message}
-                        </p>
+                        <p className="auth-error">{errors.password?.message}</p>
                     </div>
 
-                    <button
-                        disabled={isSubmitting}
-                        className="login-button"
-                    >
+                    <button disabled={isSubmitting} className="auth-button">
                         {isSubmitting ? "Loading..." : "Login"}
                     </button>
                 </form>

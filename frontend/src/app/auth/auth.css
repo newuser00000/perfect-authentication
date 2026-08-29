@@ -1,14 +1,14 @@
-.login-container {
+.auth-container {
     width: 100%;
     max-width: 450px;
 }
 
-.login-header {
+.auth-header {
     margin-bottom: 2rem;
     text-align: center;
 }
 
-.login-title {
+.auth-title {
     color: white;
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -16,14 +16,14 @@
     letter-spacing: -0.025em;
 }
 
-.login-subtitle {
+.auth-subtitle {
     margin-top: 0.5rem;
     color: #a1a1aa;
     font-size: 0.875rem;
     line-height: 1.25rem;
 }
 
-.login-card {
+.auth-card {
     width: 100%;
     padding: 2rem;
     border: 1px solid #27272a;
@@ -33,18 +33,18 @@
     backdrop-filter: blur(12px);
 }
 
-.login-form {
+.auth-form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 0.75rem;
 }
 
-.login-field {
+.auth-field {
     width: 100%;
 }
 
-.login-label {
+.auth-label {
     display: block;
     margin-bottom: 0.5rem;
     color: #e4e4e7;
@@ -53,7 +53,7 @@
     font-weight: 500;
 }
 
-.login-input {
+.auth-input {
     box-sizing: border-box;
     width: 100%;
     padding: 0.75rem 1rem;
@@ -68,25 +68,25 @@
         box-shadow 150ms ease;
 }
 
-.login-input::placeholder {
+.auth-input::placeholder {
     color: #52525b;
 }
 
-.login-input:focus {
+.auth-input:focus {
     border-color: white;
     box-shadow: 0 0 0 1px white;
 }
 
-.login-error {
-    min-height: 20px;
-    padding-top: 0.5rem;
+.auth-error {
+    min-height: 1.25rem;
+    padding-top: 0.25rem;
     color: #f87171;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
     overflow-wrap: break-word;
 }
 
-.login-button {
+.auth-button {
     width: 100%;
     padding: 0.75rem 1rem;
     border: none;
@@ -101,15 +101,15 @@
         transform 100ms ease;
 }
 
-.login-button:hover {
+.auth-button:hover {
     background: #e4e4e7;
 }
 
-.login-button:active {
+.auth-button:active {
     transform: scale(0.98);
 }
 
-.login-button:disabled {
+.auth-button:disabled {
     cursor: not-allowed;
     opacity: 0.5;
 }
